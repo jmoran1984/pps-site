@@ -10,7 +10,6 @@ import Container from "../ui/Container";
 export default function Footer() {
   return (
     <footer className="bg-linear-to-b from-[#123B63] to-[#0C2742] text-white">
-      {/* CTA */}
       <div className="relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.05]"
@@ -37,58 +36,55 @@ export default function Footer() {
         />
 
         <Container>
-          <div className="relative py-28 text-center">
+          <div className="relative py-24 text-center sm:py-28">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-200">
-              Ready To Get Started?
+              Need A Plumber?
             </p>
 
-            <h2 className="mt-6 text-5xl font-bold leading-tight lg:text-6xl">
+            <h2 className="mt-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Professional Plumbing
               <br />
               Starts With One Call.
             </h2>
 
-            <p className="mx-auto mt-8 max-w-2xl text-xl leading-9 text-blue-100">
-              Whether you need drain cleaning, water service replacement,
-              excavation, water heater installation, or emergency plumbing,
-              we&apos;re ready to help.
+            <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-blue-100 sm:text-xl sm:leading-9">
+              Tell us what&apos;s going on and we&apos;ll help you determine the
+              right next step for your plumbing problem.
             </p>
 
-            <div className="mt-12 flex flex-wrap justify-center gap-5">
-              <Button href={routes.contact}>Request Service</Button>
+            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap">
+              <Button href={site.phoneHref}>Call {site.phone}</Button>
 
-              <Button variant="secondary">{site.phone}</Button>
+              <Button href={routes.contact} variant="secondary">
+                Request Service
+              </Button>
             </div>
           </div>
         </Container>
       </div>
 
-      {/* Divider */}
       <div className="relative">
         <div className="h-px bg-white/10" />
 
         <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-[#123B63]" />
       </div>
 
-      {/* Main footer */}
       <Container>
         <div className="grid gap-16 py-20 lg:grid-cols-[2fr_1fr_1fr_1fr]">
-          {/* Company */}
           <div>
             <div className="relative isolate w-full max-w-[420px]">
-              {/* Soft brightness burst */}
               <div
                 aria-hidden
                 className="pointer-events-none absolute -inset-x-10 -inset-y-6 z-0 rounded-full blur-3xl"
                 style={{
                   background: `
-      radial-gradient(
-        ellipse at center,
-        rgba(255,255,255,.10) 0%,
-        rgba(255,255,255,.05) 45%,
-        transparent 80%
-      )
-    `,
+                    radial-gradient(
+                      ellipse at center,
+                      rgba(255,255,255,.10) 0%,
+                      rgba(255,255,255,.05) 45%,
+                      transparent 80%
+                    )
+                  `,
                 }}
               />
 
@@ -109,7 +105,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="text-lg font-semibold">Services</h3>
 
@@ -127,7 +122,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h3 className="text-lg font-semibold">Company</h3>
 
@@ -145,25 +139,37 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold">Contact</h3>
 
             <div className="mt-6 space-y-5 text-blue-100">
-              <p>{site.phone}</p>
-              <p>{site.email}</p>
+              <p>
+                <a
+                  href={site.phoneHref}
+                  className="transition-colors hover:text-white"
+                >
+                  {site.phone}
+                </a>
+              </p>
+              <p>
+                <a
+                  href={`mailto:${site.email}`}
+                  className="transition-colors hover:text-white"
+                >
+                  {site.email}
+                </a>
+              </p>
               <p>{site.address}</p>
 
               <div className="pt-4">
                 <p>Licensed &amp; Insured</p>
-                <p>Certified Master Plumber</p>
+                <p>Philadelphia Master Plumber</p>
               </div>
             </div>
           </div>
         </div>
       </Container>
 
-      {/* Bottom */}
       <div className="border-t border-white/10">
         <Container>
           <div className="flex flex-col items-center justify-between gap-4 py-8 text-sm text-blue-300 md:flex-row">
