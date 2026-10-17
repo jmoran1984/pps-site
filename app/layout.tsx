@@ -11,8 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pps-site-ruby.vercel.app/"),
-  // metadataBase: new URL(site.url),
+  metadataBase: new URL(site.url),
 
   title: {
     default: "Philadelphia Plumbing Services",
@@ -20,12 +19,13 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Professional residential and commercial plumbing services throughout Philadelphia, including drain cleaning, water heaters, water service replacement, leak repairs, and emergency plumbing service.",
+    "Professional residential and commercial plumbing services throughout Philadelphia, including drain cleaning, water heaters, water service replacement, leak repairs, and plumbing installations.",
 
   applicationName: "Philadelphia Plumbing Services",
 
   keywords: [
     "Philadelphia plumber",
+    "Philadelphia master plumber",
     "plumbing services Philadelphia",
     "drain cleaning Philadelphia",
     "water heater repair Philadelphia",
