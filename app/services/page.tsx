@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import BackToHome from "../components/ui/BackToHome";
 
 import Container from "../components/ui/Container";
+import BackToHome from "../components/ui/BackToHome";
 import Button from "../components/ui/Button";
 import Heading from "../components/ui/Heading";
 import Section from "../components/ui/Section";
@@ -41,6 +42,7 @@ export default function ServicesPage() {
   return (
     <>
       <Navbar />
+      <Container className="pt-5"><BackToHome /></Container>
       {/* Hero */}
 
       <Section className="relative overflow-hidden bg-slate-50">

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Menu, Phone, X } from "lucide-react";
-
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import Logo from "./Logo";
@@ -16,53 +16,37 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <Container className="flex h-20 items-center justify-between gap-4">
-        <div className="w-[185px] shrink-0 sm:w-[240px] xl:w-[270px]">
+      <Container className="flex h-16 min-w-0 items-center justify-between gap-2 px-3 sm:h-20 sm:gap-4 sm:px-6 lg:px-12">
+        <div className="min-w-0 shrink sm:shrink-0">
           <Logo />
         </div>
-
         <nav className="hidden items-center gap-7 text-sm font-medium text-slate-700 xl:flex">
           {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="whitespace-nowrap transition-colors hover:text-[#005A9C]"
-            >
+            <Link key={link.label} href={link.href} className="whitespace-nowrap transition-colors hover:text-[#005A9C]">
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
-
         <div className="hidden shrink-0 items-center gap-4 xl:flex">
           <div className="text-right">
-            <p className="text-xs uppercase tracking-wider text-slate-500">
-              Call Today
-            </p>
-
-            <a
-              href={site.phoneHref}
-              className="whitespace-nowrap font-semibold text-[#123B63] transition-colors hover:text-[#005A9C]"
-            >
-              {site.phone}
-            </a>
+            <p className="text-xs uppercase tracking-wider text-slate-500">Call Today</p>
+            <a href={site.phoneHref} className="whitespace-nowrap font-semibold text-[#123B63] hover:text-[#005A9C]">{site.phone}</a>
           </div>
-
           <Button href={routes.contact}>Request Service</Button>
         </div>
-
-        <div className="flex items-center gap-2 xl:hidden">
+        <div className="flex shrink-0 items-center gap-2 xl:hidden">
           <a
             href={site.phoneHref}
             aria-label={`Call Philadelphia Plumbing Services at ${site.phone}`}
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#005A9C] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#004A81]"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#005A9C] text-white transition-colors hover:bg-[#004A81] sm:w-auto sm:gap-2 sm:px-4"
           >
-            <Phone size={18} />
-            <span className="hidden sm:inline">Call Now</span>
+            <Phone size={18} aria-hidden="true" />
+            <span className="hidden text-sm font-semibold sm:inline">Call Now</span>
           </a>
-
           <button
             type="button"
             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-controls="mobile-site-nav"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
             className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-[#123B63]"
@@ -71,39 +55,24 @@ export default function Navbar() {
           </button>
         </div>
       </Container>
-
       {menuOpen && (
-        <div className="border-t border-slate-200 bg-white xl:hidden">
-          <Container className="py-5">
-            <nav className="grid gap-1">
+        <div id="mobile-site-nav" className="border-t border-slate-200 bg-white xl:hidden">
+          <Container className="py-4">
+            <nav aria-label="Mobile navigation" className="grid gap-1">
               {links.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
                   className="rounded-xl px-4 py-3 text-base font-semibold text-slate-700 transition-colors hover:bg-slate-50 hover:text-[#005A9C]"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
-
             <div className="mt-4 grid gap-3 border-t border-slate-200 pt-4 sm:grid-cols-2">
-              <a
-                href={site.phoneHref}
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#005A9C] px-5 font-semibold text-white"
-              >
-                <Phone size={18} />
-                {site.phone}
-              </a>
-
-              <a
-                href={routes.contact}
-                onClick={() => setMenuOpen(false)}
-                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-[#005A9C] px-5 font-semibold text-[#005A9C]"
-              >
-                Request Service
-              </a>
+              <a href={site.phoneHref} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#005A9C] px-5 font-semibold text-white"><Phone size={18} />{site.phone}</a>
+              <Link href={routes.contact} onClick={() => setMenuOpen(false)} className="inline-flex min-h-12 items-center justify-center rounded-xl border border-[#005A9C] px-5 font-semibold text-[#005A9C]">Request Service</Link>
             </div>
           </Container>
         </div>

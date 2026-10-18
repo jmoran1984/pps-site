@@ -2,6 +2,8 @@ import { Metadata } from "next";
 
 import Navbar from "@/app/components/layout/Navbar";
 import Footer from "@/app/components/layout/Footer";
+import BackToHome from "@/app/components/ui/BackToHome";
+import Container from "@/app/components/ui/Container";
 
 import ContactHero from "@/app/components/contact/ContactHero";
 import ContactCards from "@/app/components/contact/ContactCards";
@@ -22,6 +24,7 @@ export default function ContactPage() {
       <Navbar />
 
       <main>
+        <Container className="pt-5"><BackToHome /></Container>
         <ContactHero />
 
         <ContactCards />

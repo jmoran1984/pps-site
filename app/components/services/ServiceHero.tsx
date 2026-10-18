@@ -54,8 +54,8 @@ export default function ServiceHero({ service }: Props) {
               {service.heroDescription}
             </p>
 
-            <div className="mt-12 flex gap-4">
-              <Button href={site.phoneHref} variant="primary">
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Button href="/contact#request-service" variant="primary">
                 Request Service
               </Button>
 

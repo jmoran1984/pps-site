@@ -12,59 +12,38 @@ export default function Hero() {
           <span className="inline-flex max-w-full items-center rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-semibold leading-5 text-[#005A9C] sm:px-4 sm:py-2 sm:text-sm">
             Philadelphia Registered Master Plumber • Licensed &amp; Insured
           </span>
-
           <h1 className="mt-5 max-w-3xl text-[2.65rem] font-bold leading-[1.02] tracking-tight text-[#123B63] sm:mt-7 sm:text-5xl lg:text-6xl xl:text-7xl">
             Plumbing That Gets Done Right.
           </h1>
-
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600 sm:mt-7 sm:text-xl sm:leading-9">
             Local plumbing service throughout Philadelphia.
           </p>
-
           <div className="mt-7 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap">
-            <Button
-              href={site.phoneHref}
-              className="min-h-12 px-7 text-base sm:min-w-[210px]"
-            >
+            <Button href={site.phoneHref} className="min-h-12 px-7 text-base sm:min-w-[210px]">
               Call Now: {site.phone}
             </Button>
-
-            <Button
-              href={routes.contact}
-              variant="outline"
-              className="min-h-12 px-7 text-base sm:min-w-[170px]"
-            >
+            <Button href={routes.contact} variant="outline" className="min-h-12 px-7 text-base sm:min-w-[170px]">
               Request Service
             </Button>
           </div>
-
-          <p className="mt-4 text-sm leading-6 text-slate-500">
-            Call to speak directly with a plumbing professional.
-          </p>
+          <p className="mt-4 text-sm leading-6 text-slate-500">Call to speak directly with a plumbing professional.</p>
         </div>
-
-        <div className="relative h-[380px] overflow-hidden rounded-[28px] shadow-xl sm:h-[520px] lg:h-[650px]">
+        <div className="relative h-[390px] overflow-hidden rounded-[28px] bg-slate-100 shadow-xl sm:h-[520px] lg:h-[650px]">
           <Image
-            src="/plumbing-images/hero1.webp"
-            alt="Licensed plumber servicing a residential plumbing system in Philadelphia"
+            src="/plumbing-images/VBlcSxI_d.jpg"
+            alt="Real plumbing excavation work at a Philadelphia job site"
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
-
           <div className="absolute inset-0 bg-gradient-to-t from-[#123B63]/35 via-transparent to-transparent" />
-
           <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/95 p-4 shadow-xl backdrop-blur sm:bottom-8 sm:left-8 sm:right-auto sm:max-w-sm sm:p-6">
             <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500 sm:text-xs sm:tracking-[0.18em]">
-              Local Philadelphia Service
+              Real Work • Philadelphia
             </p>
-            <h2 className="mt-2 text-lg font-bold text-[#123B63] sm:text-xl">
-              Registered Master Plumber
-            </h2>
-            <p className="mt-1.5 text-sm leading-6 text-slate-600 sm:mt-2 sm:text-base">
-              Residential • Commercial • Property Management
-            </p>
+            <h2 className="mt-2 text-lg font-bold text-[#123B63] sm:text-xl">Registered Master Plumber</h2>
+            <p className="mt-1.5 text-sm leading-6 text-slate-600 sm:mt-2 sm:text-base">Residential • Commercial • Property Management</p>
           </div>
         </div>
       </Container>
