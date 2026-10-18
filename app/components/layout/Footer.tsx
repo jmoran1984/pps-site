@@ -65,7 +65,6 @@ export default function Footer() {
 
       <div className="relative">
         <div className="h-px bg-white/10" />
-
         <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-[#123B63]" />
       </div>
 
@@ -107,7 +106,6 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-semibold">Services</h3>
-
             <ul className="mt-6 space-y-4">
               {site.services.map((service) => (
                 <li key={service.title}>
@@ -124,7 +122,6 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-semibold">Company</h3>
-
             <ul className="mt-6 space-y-4">
               {site.navigation.map((item) => (
                 <li key={item.label}>
@@ -141,13 +138,9 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-semibold">Contact</h3>
-
             <div className="mt-6 space-y-5 text-blue-100">
               <p>
-                <a
-                  href={site.phoneHref}
-                  className="transition-colors hover:text-white"
-                >
+                <a href={site.phoneHref} className="transition-colors hover:text-white">
                   {site.phone}
                 </a>
               </p>
@@ -163,7 +156,7 @@ export default function Footer() {
 
               <div className="pt-4">
                 <p>Licensed &amp; Insured</p>
-                <p>Philadelphia Master Plumber</p>
+                <p>Philadelphia Registered Master Plumber</p>
               </div>
             </div>
           </div>
