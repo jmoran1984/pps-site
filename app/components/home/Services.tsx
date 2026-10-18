@@ -1,4 +1,4 @@
-import { Building2, Construction, Droplets, Flame, Wrench, ClipboardCheck } from "lucide-react";
+import { Building2, Construction, Droplets, Flame, ClipboardCheck } from "lucide-react";
 
 import Section from "../ui/Section";
 import Container from "../ui/Container";
@@ -9,17 +9,10 @@ import { routes } from "@/lib/routes";
 
 const homepageServices = [
   {
-    title: "Fixture Installation & Repair",
+    title: "Plumbing Repairs & Installations",
     description:
-      "Faucets, toilets, sinks, disposals, shower valves, trim, and other plumbing fixtures installed or repaired correctly.",
-    href: routes.services.detail("fixture-repairs"),
-    icon: Wrench,
-  },
-  {
-    title: "Plumbing Installations & Repairs",
-    description:
-      "Everyday plumbing service for leaks, piping repairs, replacements, upgrades, and new plumbing installations.",
-    href: routes.services.detail("leak-repairs"),
+      "Leaks, piping, faucets, toilets, shower valves, sinks, disposals, and other fixture repairs and installations.",
+    href: routes.services.root,
     icon: Construction,
   },
   {
@@ -57,18 +50,18 @@ export default function Services() {
     <Section className="bg-[#F8FAFC]">
       <Container>
         <Heading
-          eyebrow="Plumbing Services"
-          title="The Plumbing Work Philadelphia Calls Us For"
-          subtitle="Repairs, replacements, installations, and service for Philadelphia homes and businesses."
+          eyebrow="What We Do"
+          title="Plumbing Services"
+          subtitle="Repairs and installations for homes and businesses across Philadelphia."
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
           {homepageServices.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-8 flex justify-center">
           <Button href={routes.services.root} variant="outline">
             View All Plumbing Services
           </Button>
