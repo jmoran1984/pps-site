@@ -31,8 +31,8 @@ export default function Reviews() {
       <Container>
         <Heading
           eyebrow="Customer Reviews"
-          title="What Philadelphia Customers Say"
-          subtitle="Real feedback from customers who called us for plumbing service throughout Philadelphia."
+          title="What Philly Customers Say"
+          subtitle="Real feedback from customers who called us for plumbing service."
         />
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
