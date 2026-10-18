@@ -14,7 +14,7 @@ export default function Hero() {
           </span>
 
           <h1 className="mt-5 max-w-3xl text-[2.65rem] font-bold leading-[1.02] tracking-tight text-[#123B63] sm:mt-7 sm:text-5xl lg:text-6xl xl:text-7xl">
-            Philadelphia Plumbing That Gets Done Right.
+            Plumbing That Gets Done Right.
           </h1>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600 sm:mt-7 sm:text-xl sm:leading-9">
