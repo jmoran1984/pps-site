@@ -1,5 +1,6 @@
 import Container from "../ui/Container";
 import Button from "../ui/Button";
+import BackToHome from "../ui/BackToHome";
 
 import { site } from "@/lib/config/site";
 
@@ -7,6 +8,7 @@ export default function AboutHero() {
   return (
     <section className="bg-slate-50 py-28">
       <Container>
+        <div className="mb-6"><BackToHome /></div>
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-semibold uppercase tracking-[0.2em] text-[#005A9C]">
             ABOUT {site.name.toUpperCase()}
