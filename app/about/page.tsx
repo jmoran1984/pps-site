@@ -8,8 +8,10 @@ import AboutStory from "../components/about/AboutStory";
 import AboutFeatures from "../components/about/AboutFeatures";
 import AboutValues from "../components/about/AboutValues";
 import { Metadata } from "next";
+import { site } from "@/lib/config/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: `${site.url}/about` },
   title: "About Us",
   description: "Learn about Philadelphia Plumbing Services, our commitment to honest workmanship, dependable service, and quality residential and commercial plumbing throughout Philadelphia.",
 };
