@@ -10,7 +10,7 @@ export default function Hero() {
       <Container className="grid items-center gap-10 py-8 sm:py-12 lg:min-h-[calc(100vh-5rem)] lg:grid-cols-2 lg:gap-16 lg:py-20">
         <div>
           <span className="inline-flex max-w-full items-center rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-semibold leading-5 text-[#005A9C] sm:px-4 sm:py-2 sm:text-sm">
-            Philadelphia Master Plumber • Licensed &amp; Insured
+            Philadelphia Registered Master Plumber • Licensed &amp; Insured
           </span>
 
           <h1 className="mt-5 max-w-3xl text-[2.65rem] font-bold leading-[1.02] tracking-tight text-[#123B63] sm:mt-7 sm:text-5xl lg:text-6xl xl:text-7xl">
@@ -46,7 +46,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-7 grid gap-2.5 text-sm font-medium text-slate-700 sm:mt-8 sm:gap-3 sm:text-base lg:text-lg">
-            <div>✓ Philadelphia Master Plumber</div>
+            <div>✓ Philadelphia Registered Master Plumber</div>
             <div>✓ Residential &amp; Commercial Service</div>
             <div>✓ Repairs • Drains • Water Heaters • Installations</div>
           </div>
@@ -69,7 +69,7 @@ export default function Hero() {
               Local Philadelphia Service
             </p>
             <h2 className="mt-2 text-lg font-bold text-[#123B63] sm:text-xl">
-              Licensed Master Plumber
+              Registered Master Plumber
             </h2>
             <p className="mt-1.5 text-sm leading-6 text-slate-600 sm:mt-2 sm:text-base">
               Residential • Commercial • Property Management
