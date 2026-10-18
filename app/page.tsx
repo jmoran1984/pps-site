@@ -5,8 +5,8 @@ import Hero from "@/app/components/home/Hero";
 import TrustBar from "@/app/components/home/TrustBar";
 import Services from "@/app/components/home/Services";
 import WhyChoose from "@/app/components/home/WhyChoose";
-import About from "./components/home/About";
 import Reviews from "@/app/components/home/Reviews";
+import About from "./components/home/About";
 import Footer from "@/app/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -25,8 +25,8 @@ export default function Home() {
         <TrustBar />
         <Services />
         <WhyChoose />
-        <About />
         <Reviews />
+        <About />
       </main>
 
       <Footer />
