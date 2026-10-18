@@ -6,6 +6,7 @@ import TrustBar from "@/app/components/home/TrustBar";
 import Services from "@/app/components/home/Services";
 import WhyChoose from "@/app/components/home/WhyChoose";
 import About from "./components/home/About";
+import Reviews from "@/app/components/home/Reviews";
 import Footer from "@/app/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function Home() {
         <Services />
         <WhyChoose />
         <About />
+        <Reviews />
       </main>
 
       <Footer />
