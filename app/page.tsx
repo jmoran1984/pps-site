@@ -12,7 +12,7 @@ import Footer from "@/app/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Plumber in Philadelphia, PA",
   description:
-    "Philadelphia Plumbing Services provides residential and commercial plumbing, drain cleaning, leak repair, water heater service, water service replacement, and excavation throughout Philadelphia.",
+    "Philadelphia Plumbing Services provides fixture installation and repair, plumbing repairs and installations, water heaters, code corrections, water line work, and residential and commercial plumbing."
 };
 
 export default function Home() {
