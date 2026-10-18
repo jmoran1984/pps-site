@@ -26,7 +26,7 @@ const homepageServices = [
     title: "Code Violations Corrected",
     description:
       "Corrections for plumbing code violations, failed inspections, and work that needs to be brought into compliance.",
-    href: `${routes.services.root}#specialty-services`,
+    href: routes.services.root,
     icon: ClipboardCheck,
   },
   {
