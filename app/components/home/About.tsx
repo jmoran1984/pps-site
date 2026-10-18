@@ -25,14 +25,10 @@ export default function About() {
             <Heading
               eyebrow="About Philadelphia Plumbing Services"
               title="Local Plumbing, Done Right"
-              subtitle="Philadelphia Plumbing Services serves homeowners, businesses, and property managers across the city with practical plumbing repairs and installations."
+              subtitle="Philadelphia is home, and we’ve spent years working on its plumbing—from older rowhomes and aging systems to renovations and new installations. We take pride in caring for the homes and buildings in our city, and in doing the work right."
             />
 
-            <p className="mt-6 max-w-xl leading-8 text-slate-600">
-              Led by a Philadelphia Registered Master Plumber. Licensed and insured for residential and commercial work.
-            </p>
-
-            <div className="mt-10">
+            <div className="mt-8">
               <Button href={routes.about}>About Our Company</Button>
             </div>
           </div>
