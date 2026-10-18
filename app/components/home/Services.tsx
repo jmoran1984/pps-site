@@ -59,7 +59,7 @@ export default function Services() {
         <Heading
           eyebrow="Plumbing Services"
           title="The Plumbing Work Philadelphia Calls Us For"
-          subtitle="Fixtures, plumbing installations and repairs, water heaters, code corrections, drain and water line work, and residential and commercial plumbing."
+          subtitle="Repairs, replacements, installations, and service for Philadelphia homes and businesses."
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
