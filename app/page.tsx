@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import Navbar from "@/app/components/layout/Navbar";
 import Hero from "@/app/components/home/Hero";
-import TrustBar from "@/app/components/home/TrustBar";
 import Services from "@/app/components/home/Services";
 import Reviews from "@/app/components/home/Reviews";
 import WhyChoose from "@/app/components/home/WhyChoose";
@@ -22,7 +21,6 @@ export default function Home() {
 
       <main>
         <Hero />
-        <TrustBar />
         <Services />
         <Reviews />
         <WhyChoose />
