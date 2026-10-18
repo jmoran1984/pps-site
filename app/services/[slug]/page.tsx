@@ -5,6 +5,7 @@ import { services } from "@/lib/data/services";
 
 
 import { Metadata } from "next";
+import { site } from "@/lib/config/site";
 
 import Navbar from "@/app/components/layout/Navbar";
 import ServiceProcess from "@/app/components/services/ServiceProcess";
@@ -40,7 +41,7 @@ export async function generateMetadata({
     description: service.metaDescription,
 
     alternates: {
-        canonical: `https://philadelphiaplumbingservices.com/services/${service.slug}`,
+        canonical: `${site.url}/services/${service.slug}`,
     },
 
     openGraph: {
@@ -48,7 +49,7 @@ export async function generateMetadata({
 
         description: service.metaDescription,
 
-        url: `https://philadelphiaplumbingservices.com/services/${service.slug}`,
+        url: `${site.url}/services/${service.slug}`,
 
         type: "website",
 
