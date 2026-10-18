@@ -4,13 +4,12 @@ import Container from "../components/ui/Container";
 import BackToHome from "../components/ui/BackToHome";
 import Button from "../components/ui/Button";
 import Heading from "../components/ui/Heading";
+import RepairsGallery from "../components/services/RepairsGallery";
 import Section from "../components/ui/Section";
 
 import { services } from "@/lib/data/services";
 
 const servicePriority = [
-  "fixture-repairs",
-  "leak-repairs",
   "water-heaters",
   "water-services",
   "commercial-plumbing",
@@ -75,13 +74,20 @@ export default function ServicesPage() {
 
       <Section>
         <Container>
+          <div id="repairs-installations" className="scroll-mt-28">
           <Heading
             eyebrow="Our Services"
-            title="Plumbing Work Done Right"
-            subtitle="Browse our full range of plumbing services."
+            title="Repairs & Installations"
+            subtitle="Choose the type of work you need. Tap a photo to see common repairs and installations without leaving this page."
           />
 
-          <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <RepairsGallery />
+          </div>
+
+          <div id="specialty-services" className="mt-16 scroll-mt-28 border-t border-slate-200 pt-12">
+            <Heading eyebrow="Specialty Services" title="More Plumbing Services" subtitle="Additional services with more information for jobs that require specific planning or equipment." />
+          </div>
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
             {orderedServices.map((service) => (
               <Link
                 key={service.slug}
