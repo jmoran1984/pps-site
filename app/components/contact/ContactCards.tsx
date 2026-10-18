@@ -54,7 +54,7 @@ export default function ContactCards() {
                   {card.title}
                 </h3>
 
-                <p className="mt-4 font-medium text-slate-800">
+                <p className="mt-4 font-medium text-slate-800" data-pps-phone-display={card.title === "Call Us" ? "" : undefined}>
                   {card.value}
                 </p>
 
