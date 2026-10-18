@@ -1,6 +1,6 @@
 import {
     ShieldCheck,
-    Clock3,
+    MessageSquareText,
     Wrench,
     MapPinned,
 } from "lucide-react";
@@ -9,27 +9,27 @@ import { Feature } from "../types/feature";
 
 export const features: Feature[] = [
     {
-        title: "Licensed & Insured",
+        title: "Registered Master Plumber",
         description:
-            "Work is performed by a Philadelphia Registered Master Plumber and backed by full insurance coverage.",
+            "Your plumbing work is led by a Philadelphia Registered Master Plumber with the responsibility and accountability that comes with the credential.",
         icon: ShieldCheck,
     },
     {
-        title: "Reliable Scheduling",
+        title: "Straightforward Communication",
         description:
-            "Clear communication, dependable scheduling, and prompt arrival windows.",
-        icon: Clock3,
+            "Clear explanations, practical options, and direct communication so you understand the problem and the work being recommended.",
+        icon: MessageSquareText,
     },
     {
         title: "Quality Workmanship",
         description:
-            "Professional repairs and installations using proven methods and quality materials.",
+            "Repairs and installations are approached with proven methods, quality materials, and attention to the details that make the work last.",
         icon: Wrench,
     },
     {
-        title: "Focused on Philadelphia",
+        title: "Built for Philadelphia",
         description:
-            "Serving homeowners, businesses, and property managers throughout Philadelphia.",
+            "Local plumbing service for Philadelphia homes, businesses, property managers, and the older plumbing systems common throughout the city.",
         icon: MapPinned,
     },
 ];
