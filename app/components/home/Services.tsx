@@ -12,7 +12,7 @@ const homepageServices = [
     title: "Plumbing Repairs & Installations",
     description:
       "Leaks, piping, faucets, toilets, shower valves, sinks, disposals, and other fixture repairs and installations.",
-    href: routes.services.root,
+    href: `${routes.services.root}#repairs-installations`,
     icon: Construction,
   },
   {
@@ -26,7 +26,7 @@ const homepageServices = [
     title: "Code Violations Corrected",
     description:
       "Corrections for plumbing code violations, failed inspections, and work that needs to be brought into compliance.",
-    href: routes.services.root,
+    href: `${routes.services.root}#specialty-services`,
     icon: ClipboardCheck,
   },
   {
