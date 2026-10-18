@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { site } from "@/lib/config/site";
+import GoogleTracking from "@/app/components/analytics/GoogleTracking";
 
 import "./globals.css";
 
@@ -56,7 +57,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} antialiased`}>
+        <GoogleTracking />
+        {children}
+      </body>
     </html>
   );
 }
