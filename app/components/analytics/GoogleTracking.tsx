@@ -27,7 +27,7 @@ const tagId = adsId || gaId;
 const forwardingCallbackSetup = `
 (function () {
   var businessNumber = ${JSON.stringify(site.phone)};
-  var businessDigits = ${JSON.stringify(site.phone.replace(/\\D/g, ""))};
+  var businessDigits = ${JSON.stringify(site.phone.replace(/\D/g, ""))};
   var state = null;
   var observer = null;
   var scheduled = false;
