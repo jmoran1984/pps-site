@@ -9,7 +9,7 @@ import Container from "../ui/Container";
 
 export default function Footer() {
   return (
-    <footer className="bg-linear-to-b from-[#123B63] to-[#0C2742] text-white">
+    <footer className="bg-linear-to-b from-[#07558C] to-[#06395E] text-white">
       <div className="relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.05]"
@@ -65,7 +65,7 @@ export default function Footer() {
 
       <div className="relative">
         <div className="h-px bg-white/10" />
-        <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-[#123B63]" />
+        <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-[#07558C]" />
       </div>
 
       <Container>
@@ -88,15 +88,15 @@ export default function Footer() {
               />
 
               <Image
-                src="/images/no_bg_dark_logo_horizontal.png"
+                src="/images/philadelphia-legacy-logo.svg"
                 alt={site.name}
                 width={420}
-                height={120}
-                className="relative z-10 block h-auto w-full"
+                height={280}
+                className="relative z-10 block h-auto w-full rounded-xl bg-white p-3"
               />
             </div>
 
-            <p className="-mt-5 max-w-md leading-8 text-blue-100">
+            <p className="mt-5 max-w-md leading-8 text-blue-100">
               Professional residential and commercial plumbing services
               throughout Philadelphia. From routine repairs to complex
               excavation and water service replacement, we&apos;re committed to
