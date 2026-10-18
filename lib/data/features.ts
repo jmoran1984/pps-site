@@ -1,5 +1,4 @@
 import {
-    ShieldCheck,
     MessageSquareText,
     Wrench,
     MapPinned,
@@ -9,27 +8,21 @@ import { Feature } from "../types/feature";
 
 export const features: Feature[] = [
     {
-        title: "Registered Master Plumber",
-        description:
-            "Your plumbing work is led by a Philadelphia Registered Master Plumber with the responsibility and accountability that comes with the credential.",
-        icon: ShieldCheck,
-    },
-    {
         title: "Straightforward Communication",
         description:
-            "Clear explanations, practical options, and direct communication so you understand the problem and the work being recommended.",
+            "Understand the issue, your options, and the next steps.",
         icon: MessageSquareText,
     },
     {
         title: "Quality Workmanship",
         description:
-            "Repairs and installations are approached with proven methods, quality materials, and attention to the details that make the work last.",
+            "Careful repairs and installations using dependable materials.",
         icon: Wrench,
     },
     {
         title: "Built for Philadelphia",
         description:
-            "Local plumbing service for Philadelphia homes, businesses, property managers, and the older plumbing systems common throughout the city.",
+            "Experience with the homes, buildings, and plumbing systems across our city.",
         icon: MapPinned,
     },
 ];
