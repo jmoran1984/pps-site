@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import BackToHome from "../components/ui/BackToHome";
 
 import Container from "../components/ui/Container";
 import Button from "../components/ui/Button";
@@ -44,6 +45,7 @@ export default function ServicesPage() {
 
       <Section className="relative overflow-hidden bg-slate-50">
         <Container>
+          <div className="mb-6"><BackToHome /></div>
           <div className="mx-auto max-w-3xl text-center">
             <p className="font-semibold uppercase tracking-[0.2em] text-[#005A9C]">
               Philadelphia Plumbing Services
@@ -77,7 +79,7 @@ export default function ServicesPage() {
           <Heading
             eyebrow="Our Services"
             title="Plumbing Work Done Right"
-            subtitle="Fixture work, repairs, installations, water heaters, code corrections, drain and water line work, and commercial plumbing."
+            subtitle="Browse our full range of plumbing services."
           />
 
           <div className="mt-16 grid gap-8 lg:grid-cols-2">
