@@ -9,15 +9,15 @@ export default function WhyChoose() {
       <Container>
         <Heading
           eyebrow="Why Homeowners Call Us"
-          title="Honest Work. Clear Communication. Quality Plumbing."
-          subtitle="Homeowners call us because we keep things straightforward: clear explanations, transparent recommendations, quality workmanship, and fair pricing for the work being done."
+          title="Straightforward Service, From Start to Finish"
+          subtitle="Homeowners call us because we keep things straightforward: transparent troubleshooting and diagnosis, clear recommendations and planning, quality workmanship, fair pricing, and consistent professionalism."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="flex flex-col gap-6 rounded-3xl border border-slate-200 bg-white p-7 transition hover:shadow-lg sm:p-8"
+              className="flex flex-col gap-4 rounded-3xl border border-slate-200 bg-white p-6 transition hover:shadow-md sm:p-7"
             >
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-50">
                 <feature.icon size={28} className="text-[#005A9C]" />
@@ -28,7 +28,7 @@ export default function WhyChoose() {
                   {feature.title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-slate-600 sm:leading-8">
+                <p className="mt-2 leading-7 text-slate-600">
                   {feature.description}
                 </p>
               </div>
