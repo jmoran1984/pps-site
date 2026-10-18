@@ -5,6 +5,7 @@ import { Resend } from "resend";
 export type RequestServiceState = {
   success: boolean;
   message: string;
+  delivered?: boolean;
 };
 
 const initialError: RequestServiceState = {
@@ -40,6 +41,7 @@ export async function submitServiceRequest(
     return {
       success: true,
       message: "Your request has been received.",
+      delivered: false,
     };
   }
 
@@ -106,6 +108,7 @@ export async function submitServiceRequest(
       success: true,
       message:
         "Thanks! Your request has been sent. We’ll contact you as soon as possible.",
+      delivered: true,
     };
   } catch (error) {
     console.error("Service request submission failed:", error);
