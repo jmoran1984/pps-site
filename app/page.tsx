@@ -4,8 +4,8 @@ import Navbar from "@/app/components/layout/Navbar";
 import Hero from "@/app/components/home/Hero";
 import TrustBar from "@/app/components/home/TrustBar";
 import Services from "@/app/components/home/Services";
-import WhyChoose from "@/app/components/home/WhyChoose";
 import Reviews from "@/app/components/home/Reviews";
+import WhyChoose from "@/app/components/home/WhyChoose";
 import About from "./components/home/About";
 import Footer from "@/app/components/layout/Footer";
 
@@ -24,8 +24,8 @@ export default function Home() {
         <Hero />
         <TrustBar />
         <Services />
-        <WhyChoose />
         <Reviews />
+        <WhyChoose />
         <About />
       </main>
 
