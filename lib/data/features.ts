@@ -11,7 +11,7 @@ export const features: Feature[] = [
     {
         title: "Licensed & Insured",
         description:
-            "Every project is completed by a Certified Master Plumber and backed by full insurance coverage.",
+            "Work is performed by a Philadelphia Registered Master Plumber and backed by full insurance coverage.",
         icon: ShieldCheck,
     },
     {
