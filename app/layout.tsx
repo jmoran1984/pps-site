@@ -11,6 +11,8 @@ const inter = Inter({
   display: "swap",
 });
 
+const publicProduction = process.env.VERCEL_ENV === "production";
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
 
@@ -37,12 +39,32 @@ export const metadata: Metadata = {
 
   category: "Plumbing",
 
+  // Shareable previews, while search-engine indexing is reserved for production.
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: site.url,
+    siteName: site.name,
+    title: site.name,
+    description:
+      "Professional residential and commercial plumbing services throughout Philadelphia.",
+    images: [{ url: "/images/og-image.png", alt: site.name }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/og-image.png"],
+  },
+  icons: {
+    icon: "/images/favicon.ico",
+    apple: "/images/apple-touch-icon.png",
+  },
+
   robots: {
-    index: true,
-    follow: true,
+    index: publicProduction,
+    follow: publicProduction,
     googleBot: {
-      index: true,
-      follow: true,
+      index: publicProduction,
+      follow: publicProduction,
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1,
