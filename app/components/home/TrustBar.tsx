@@ -5,7 +5,7 @@ const items = [
   {
     icon: ShieldCheck,
     title: "Philadelphia",
-    subtitle: "Master Plumber",
+    subtitle: "Registered Master Plumber",
   },
   {
     icon: BadgeCheck,
