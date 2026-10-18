@@ -8,27 +8,27 @@ export default function WhyChoose() {
     <Section>
       <Container>
         <Heading
-          eyebrow="Why Philadelphia Chooses Us"
-          title="Professional Plumbing Backed by Experience"
-          subtitle="We believe earning your trust starts long before the work begins. Clear communication, dependable service, and quality workmanship are the standards behind every project."
+          eyebrow="Why Homeowners Call Us"
+          title="Local Plumbing With Real Accountability"
+          subtitle="You should know who is responsible for the work in your home or property. We focus on clear communication, proper methods, and dependable workmanship from the first call through completion."
         />
 
-        <div className="mt-20 space-y-12">
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="flex flex-col md:flex-row gap-8 rounded-3xl border border-slate-200 bg-white p-10 transition hover:shadow-lg"
+              className="flex flex-col gap-6 rounded-3xl border border-slate-200 bg-white p-7 transition hover:shadow-lg sm:p-8"
             >
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-blue-50">
-                <feature.icon size={30} className="text-[#005A9C]" />
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-50">
+                <feature.icon size={28} className="text-[#005A9C]" />
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-[#123B63]">
+                <h3 className="text-xl font-bold text-[#123B63] sm:text-2xl">
                   {feature.title}
                 </h3>
 
-                <p className="mt-4 leading-8 text-slate-600">
+                <p className="mt-3 leading-7 text-slate-600 sm:leading-8">
                   {feature.description}
                 </p>
               </div>
