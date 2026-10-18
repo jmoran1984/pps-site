@@ -7,6 +7,23 @@ import Heading from "../components/ui/Heading";
 import Section from "../components/ui/Section";
 
 import { services } from "@/lib/data/services";
+
+const servicePriority = [
+  "fixture-repairs",
+  "leak-repairs",
+  "water-heaters",
+  "water-services",
+  "commercial-plumbing",
+  "drain-cleaning",
+  "sump-pumps",
+  "water-filtration",
+  "new-construction-rough-ins",
+  "sewer-water-excavation",
+];
+
+const orderedServices = servicePriority
+  .map((slug) => services.find((service) => service.slug === slug))
+  .filter((service): service is (typeof services)[number] => Boolean(service));
 import { routes } from "@/lib/routes";
 import { site } from "@/lib/config/site";
 import Navbar from "../components/layout/Navbar";
@@ -16,7 +33,7 @@ import Footer from "../components/layout/Footer";
 export const metadata: Metadata = {
   title: "Plumbing Services",
   description:
-    "Explore our residential and commercial plumbing services in Philadelphia, including drain cleaning, water heater installation, leak repairs, water service replacement, excavation, sump pumps, and more.",
+    "Plumbing service in Philadelphia focused on fixture installation and repair, plumbing repairs and installations, water heaters, code corrections, water line work, and residential and commercial plumbing.",
 };
 
 export default function ServicesPage() {
@@ -33,13 +50,13 @@ export default function ServicesPage() {
             </p>
 
             <h1 className="mt-6 text-5xl font-bold text-[#123B63] lg:text-6xl">
-              Professional Plumbing Services Throughout Philadelphia
+              Plumbing Service, Repairs & Installations
             </h1>
 
             <p className="mt-8 text-xl leading-9 text-slate-600">
-              From drain cleaning and water heaters to complete water service
-              replacements and commercial plumbing, we provide dependable
-              plumbing solutions for homes and businesses across Philadelphia.
+              From fixture installations and everyday plumbing repairs to water heaters,
+              code corrections, water line work, and commercial service, we focus
+              on the plumbing work homes and businesses need most.
             </p>
 
             <div className="mt-12 flex flex-wrap justify-center gap-4">
@@ -59,12 +76,12 @@ export default function ServicesPage() {
         <Container>
           <Heading
             eyebrow="Our Services"
-            title="Complete Plumbing Solutions"
-            subtitle="Professional plumbing services performed by a licensed and insured team serving Philadelphia."
+            title="Plumbing Work Done Right"
+            subtitle="Fixture work, repairs, installations, water heaters, code corrections, drain and water line work, and commercial plumbing."
           />
 
           <div className="mt-16 grid gap-8 lg:grid-cols-2">
-            {services.map((service) => (
+            {orderedServices.map((service) => (
               <Link
                 key={service.slug}
                 href={routes.services.detail(service.slug)}
