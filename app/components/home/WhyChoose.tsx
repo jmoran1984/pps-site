@@ -9,8 +9,8 @@ export default function WhyChoose() {
       <Container>
         <Heading
           eyebrow="Why Homeowners Call Us"
-          title="Local Plumbing With Real Accountability"
-          subtitle="You should know who is responsible for the work in your home or property. We focus on clear communication, proper methods, and dependable workmanship from the first call through completion."
+          title="Honest Work. Clear Communication. Quality Plumbing."
+          subtitle="Homeowners call us because we keep things straightforward: clear explanations, transparent recommendations, quality workmanship, and fair pricing for the work being done."
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
