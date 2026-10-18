@@ -208,7 +208,7 @@ export const services: Service[] = [
     heroDescription:
       "Even a small plumbing leak can lead to costly water damage if ignored. Philadelphia Plumbing Services quickly locates leaking pipes, fixtures, and plumbing systems before making dependable repairs that protect your property.",
 
-    seoTitle: "Leak Repair Philadelphia, PA | Philadelphia Plumbing Services",
+    seoTitle: "Leak Repair Philadelphia, PA",
 
     metaDescription:
       "Professional plumbing leak repairs including leaking pipes, fixtures, water lines, and emergency plumbing repairs throughout Philadelphia.",
