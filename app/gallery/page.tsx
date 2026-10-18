@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { site } from "@/lib/config/site";
 import fs from "node:fs";
 import path from "node:path";
 import Link from "next/link";
@@ -11,6 +12,7 @@ import { routes } from "@/lib/routes";
 import { photosForCategory } from "@/lib/data/workPhotoSets";
 
 export const metadata: Metadata = {
+  alternates: { canonical: `${site.url}/gallery` },
   title: "Our Plumbing Work | Photo Gallery",
   description: "Browse photographs of plumbing work, repairs, installations, and projects from Philadelphia Plumbing Services.",
 };
