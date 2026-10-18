@@ -8,21 +8,21 @@ import Section from "../ui/Section";
 import { routes } from "@/lib/routes";
 
 const highlights = [
-  "Certified Master Plumber",
+  "Philadelphia Registered Master Plumber",
   "Licensed & Fully Insured",
   "Residential & Commercial Plumbing",
-  "Water Service & Excavation Specialists",
+  "Repairs, Service Work & Installations",
 ];
 
 export default function About() {
   return (
     <Section className="bg-white">
       <Container>
-        <div className="grid items-center gap-20 lg:grid-cols-2">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] shadow-xl">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] shadow-xl sm:rounded-[32px]">
             <Image
               src="/plumbing-images/about1.webp"
-              alt="Licensed Philadelphia plumber discussing plumbing repairs with a homeowner in a modern kitchen"
+              alt="Philadelphia plumber discussing plumbing work with a homeowner"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -32,22 +32,33 @@ export default function About() {
           <div>
             <Heading
               eyebrow="About Philadelphia Plumbing Services"
-              title="Serving Philadelphia With Professional Plumbing Solutions"
-              subtitle="From routine plumbing repairs to complete water service replacements and excavation projects, Philadelphia Plumbing Services delivers dependable workmanship, honest communication, and lasting solutions for homeowners and businesses."
+              title="A Local Plumbing Company Built Around the Work"
+              subtitle="Philadelphia Plumbing Services provides service, repair, installation, and larger plumbing work for homeowners, businesses, and property managers throughout the city. The goal is simple: diagnose the problem correctly, explain the options clearly, and do the work properly."
             />
 
-            <div className="mt-10 space-y-5">
+            <div className="mt-8 space-y-4 sm:mt-10 sm:space-y-5">
               {highlights.map((item) => (
-                <div key={item} className="flex items-center gap-4">
-                  <CheckCircle2 className="text-[#005A9C]" size={22} />
+                <div key={item} className="flex items-start gap-3 sm:gap-4">
+                  <CheckCircle2
+                    className="mt-0.5 shrink-0 text-[#005A9C]"
+                    size={22}
+                  />
 
-                  <span className="text-lg text-slate-700">{item}</span>
+                  <span className="text-base leading-7 text-slate-700 sm:text-lg">
+                    {item}
+                  </span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-12">
-              <Button href={routes.about}>Learn More</Button>
+            <p className="mt-8 max-w-xl leading-8 text-slate-600">
+              We work across Philadelphia on everything from everyday plumbing
+              problems to water service, drainage, fixture, and commercial
+              plumbing needs.
+            </p>
+
+            <div className="mt-10">
+              <Button href={routes.about}>About Our Company</Button>
             </div>
           </div>
         </div>
