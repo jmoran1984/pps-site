@@ -14,8 +14,8 @@ const repairs = [
     id: "fixtures",
     title: "Fixtures",
     summary: "Faucets, toilets, sinks, disposals, shower valves, and other everyday plumbing fixtures.",
-    image: "/plumbing-images/fixture1.webp",
-    imageAlt: "Plumber working on a sink drain connection",
+    image: "/work-photos/IMG_2961.jpg",
+    imageAlt: "Finished modern bathroom sink and faucet installation",
     detail:
       "From a dripping faucet to a fixture that needs replacing, we'll check the problem and explain whether repair or replacement makes more sense.",
     examples: ["Faucets, sinks & disposals", "Toilets & flush components", "Shower valves & trim"],
@@ -24,8 +24,8 @@ const repairs = [
     id: "leaks",
     title: "Leaks & Piping",
     summary: "Leaking connections, damaged pipes, supply lines, and other water-related repairs.",
-    image: "/plumbing-images/leak1.webp",
-    imageAlt: "Water spraying from a leaking copper pipe",
+    image: "/work-photos/IMG_0439.jpg",
+    imageAlt: "Under-sink drain piping and garbage disposal connections",
     detail:
       "We work to find the source of the leak, assess the surrounding piping, and recommend an appropriate repair or replacement.",
     examples: ["Pipe & fitting repairs", "Water supply lines", "Troubleshooting visible and suspected leaks"],
@@ -34,8 +34,8 @@ const repairs = [
     id: "installations",
     title: "New Installations",
     summary: "Bathroom installations, finished spaces, and plumbing upgrades, from rough-in to completion.",
-    image: "/plumbing-images/roughconstruction1.webp",
-    imageAlt: "Water and drain piping installed during construction",
+    image: "/work-photos/Resized_20181107_083635.jpeg",
+    imageAlt: "Completed tile shower with installed shower fixtures",
     detail:
       "Whether you're changing fixtures, updating worn piping, or planning a renovation, we can discuss the layout, materials, and scope of the work.",
     examples: ["Fixture replacements & upgrades", "New or replacement piping", "Kitchen & bathroom plumbing projects"],
