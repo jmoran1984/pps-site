@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Camera } from "lucide-react";
 import Container from "../components/ui/Container";
 import BackToHome from "../components/ui/BackToHome";
 import Button from "../components/ui/Button";
@@ -82,10 +82,11 @@ export default function ServicesPage() {
           />
 
           <RepairsGallery />
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-blue-100 bg-[#F5FAFE] px-5 py-5"><p className="max-w-xl text-sm leading-6 text-slate-600">See more photographs of actual plumbing projects in our dedicated work gallery.</p><Link href={routes.gallery} className="inline-flex min-h-11 items-center gap-2 font-semibold text-[#0879C7] hover:underline"><Camera size={19} aria-hidden="true" />View Work Photos<ArrowRight size={17} aria-hidden="true" /></Link></div>
           </div>
 
           <div id="specialty-services" className="mt-16 scroll-mt-28 border-t border-slate-200 pt-12">
-            <Heading eyebrow="Specialty Services" title="More Plumbing Services" subtitle="Additional services with more information for jobs that require specific planning or equipment." />
+            <Heading eyebrow="Specialty Services" title="Specialty Plumbing Work" subtitle="Additional services for water heaters, water lines, drains, and larger projects." />
           </div>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
             {orderedServices.map((service) => (

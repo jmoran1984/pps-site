@@ -61,10 +61,9 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="mt-8 flex justify-center">
-          <Button href={routes.services.root} variant="outline">
-            View All Plumbing Services
-          </Button>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <Button href={routes.services.root} variant="outline">View All Plumbing Services</Button>
+          <Button href={routes.gallery} variant="secondary">View Our Work Photos</Button>
         </div>
       </Container>
     </Section>

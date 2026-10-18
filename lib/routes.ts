@@ -6,6 +6,7 @@ export const routes = {
   home: "/",
   about: "/about",
   contact: "/contact",
+  gallery: "/gallery",
 
   services: {
     root: SERVICES_ROOT,

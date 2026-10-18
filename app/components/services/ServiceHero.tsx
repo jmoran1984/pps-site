@@ -5,7 +5,8 @@ import Container from "../../components/ui/Container";
 import Button from "../../components/ui/Button";
 import { Service } from "@/lib/types/service";
 import { site } from "@/lib/config/site";
-import { ShieldCheck, Wrench, Building2, MapPin, Phone } from "lucide-react";
+import { ShieldCheck, Wrench, Building2, MapPin, Phone, ArrowLeft, Camera } from "lucide-react";
+import { routes } from "@/lib/routes";
 
 interface Props {
   service: Service;
@@ -13,11 +14,12 @@ interface Props {
 
 export default function ServiceHero({ service }: Props) {
   return (
-    <section className="relative overflow-hidden bg-white py-28">
+    <section className="relative overflow-hidden bg-white py-10 sm:py-16 lg:py-20">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f015_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f015_1px,transparent_1px)] bg-[size:64px_64px]" />
 
       <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-[#005A9C]/5 blur-3xl" />
       <Container>
+        <Link href={`${routes.services.root}#specialty-services`} className="relative z-10 mb-6 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-[#0879C7] hover:underline"><ArrowLeft size={18} aria-hidden="true" />Back to Plumbing Services</Link>
         <nav
           className="relative z-10 mb-10 flex flex-wrap items-center gap-2 text-sm text-slate-500"
           aria-label="Breadcrumb"
@@ -101,6 +103,7 @@ export default function ServiceHero({ service }: Props) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#123B63]/10 via-transparent to-transparent" />
             </div>
+            <Link href={routes.gallery} className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-[#0879C7] hover:underline"><Camera size={18} aria-hidden="true" />Browse Our Work Photos</Link>
           </div>
         </div>
       </Container>
