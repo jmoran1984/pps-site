@@ -18,9 +18,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600 sm:mt-7 sm:text-xl sm:leading-9">
-            Plumbing repairs, drain cleaning, water heaters, water service work,
-            and fixture installations for homes and businesses throughout
-            Philadelphia.
+            Local plumbing service throughout Philadelphia.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap">
@@ -41,15 +39,8 @@ export default function Hero() {
           </div>
 
           <p className="mt-4 text-sm leading-6 text-slate-500">
-            Local service throughout Philadelphia. Call to speak directly with a
-            plumbing professional.
+            Call to speak directly with a plumbing professional.
           </p>
-
-          <div className="mt-7 grid gap-2.5 text-sm font-medium text-slate-700 sm:mt-8 sm:gap-3 sm:text-base lg:text-lg">
-            <div>✓ Philadelphia Registered Master Plumber</div>
-            <div>✓ Residential &amp; Commercial Service</div>
-            <div>✓ Repairs • Drains • Water Heaters • Installations</div>
-          </div>
         </div>
 
         <div className="relative h-[380px] overflow-hidden rounded-[28px] shadow-xl sm:h-[520px] lg:h-[650px]">
