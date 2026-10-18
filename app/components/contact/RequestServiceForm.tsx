@@ -27,7 +27,10 @@ export default function RequestServiceForm() {
     if (state.success) {
       formRef.current?.reset();
     }
-  }, [state.success]);
+    if (state.success && state.delivered) {
+      window.dispatchEvent(new Event("pps:service-request-success"));
+    }
+  }, [state.success, state.delivered]);
 
   return (
     <section id="request-service" className="scroll-mt-24 bg-slate-50 py-24">
