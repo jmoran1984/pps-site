@@ -21,6 +21,96 @@ const formLabel = validLabel(rawFormLabel);
 const websiteCallLabel = validLabel(rawWebsiteCallLabel);
 const tagId = adsId || gaId;
 
+// Google's forwarding callback provides both the number for display and the
+// dialable number. This is necessary because changing only the text leaves
+// mobile tel: links dialing the original number.
+const forwardingCallbackSetup = `
+(function () {
+  var businessNumber = ${JSON.stringify(site.phone)};
+  var businessDigits = ${JSON.stringify(site.phone.replace(/\\D/g, ""))};
+  var state = null;
+  var observer = null;
+  var scheduled = false;
+
+  function updatePhoneText(root) {
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      if (node.nodeValue && node.nodeValue.includes(businessNumber)) {
+        node.nodeValue = node.nodeValue.split(businessNumber).join(state.formatted);
+      }
+    }
+    if (root instanceof Element) {
+      var label = root.getAttribute("aria-label");
+      if (label && label.includes(businessNumber)) {
+        root.setAttribute("aria-label", label.split(businessNumber).join(state.formatted));
+      }
+    }
+  }
+
+  function syncPhoneLinks() {
+    if (!state) return;
+    // Account for newly rendered buttons on client-side page transitions.
+    document.querySelectorAll('a[href^="tel:"], a[data-pps-forwarded-call]').forEach(function (link) {
+      var href = link.getAttribute("href") || "";
+      var digits = href.replace(/\\D/g, "");
+      if (digits !== businessDigits && digits !== "1" + businessDigits && !link.hasAttribute("data-pps-forwarded-call")) {
+        return;
+      }
+
+      var nextHref = "tel:" + state.mobile;
+      if (href !== nextHref) link.setAttribute("href", nextHref);
+      if (!link.hasAttribute("data-pps-forwarded-call")) {
+        link.setAttribute("data-pps-forwarded-call", "");
+      }
+      updatePhoneText(link);
+    });
+
+    document.querySelectorAll("[data-pps-phone-display]").forEach(updatePhoneText);
+  }
+
+  function scheduleSync() {
+    if (scheduled) return;
+    scheduled = true;
+    window.requestAnimationFrame(function () {
+      scheduled = false;
+      syncPhoneLinks();
+    });
+  }
+
+  function watchForNavigation() {
+    if (observer || !document.body) return;
+    observer = new MutationObserver(scheduleSync);
+    observer.observe(document.body, {
+      subtree: true,
+      childList: true,
+      characterData: true,
+      attributes: true,
+      attributeFilter: ["href"]
+    });
+  }
+
+  window.__ppsPhoneConversionCallback = function (formatted, mobile) {
+    if (typeof formatted !== "string" ||
+        typeof mobile !== "string" ||
+        !/^\\+?\\d{10,15}$/.test(mobile)) return;
+    state = { formatted: formatted, mobile: mobile };
+    watchForNavigation();
+    syncPhoneLinks();
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      if (state) {
+        watchForNavigation();
+        syncPhoneLinks();
+      }
+    }, { once: true });
+  }
+})();
+`;
+
+
 type TrackingWindow = Window & {
   gtag?: (...args: unknown[]) => void;
   dataLayer?: unknown[];
@@ -84,8 +174,9 @@ export default function GoogleTracking() {
     "gtag('js', new Date());",
     adsId ? `gtag('config', ${JSON.stringify(adsId)});` : "",
     gaId ? `gtag('config', ${JSON.stringify(gaId)});` : "",
+    adsId && websiteCallLabel ? forwardingCallbackSetup : "",
     adsId && websiteCallLabel
-      ? `gtag('config', ${JSON.stringify(`${adsId}/${websiteCallLabel}`)}, { phone_conversion_number: ${JSON.stringify(site.phone)} });`
+      ? `gtag('config', ${JSON.stringify(`${adsId}/${websiteCallLabel}`)}, { phone_conversion_number: ${JSON.stringify(site.phone)}, phone_conversion_callback: window.__ppsPhoneConversionCallback });`
       : "",
   ].filter(Boolean).join("\n");
 
