@@ -7,11 +7,12 @@ import { ChevronDown, Check, Phone } from "lucide-react";
 import Button from "@/app/components/ui/Button";
 import { site } from "@/lib/config/site";
 import { routes } from "@/lib/routes";
+import { photosForCategory, type WorkPhotoCategory } from "@/lib/data/workPhotoSets";
 
 const repairs = [
   {
     id: "fixtures",
-    title: "Fixtures & Fittings",
+    title: "Fixtures",
     summary: "Faucets, toilets, sinks, disposals, shower valves, and other everyday plumbing fixtures.",
     image: "/plumbing-images/fixture1.webp",
     imageAlt: "Plumber working on a sink drain connection",
@@ -31,8 +32,8 @@ const repairs = [
   },
   {
     id: "installations",
-    title: "New Installations & Upgrades",
-    summary: "Replacement piping, fixture installations, and plumbing for remodeling or improvement projects.",
+    title: "New Installations",
+    summary: "Bathroom installations, finished spaces, and plumbing upgrades, from rough-in to completion.",
     image: "/plumbing-images/roughconstruction1.webp",
     imageAlt: "Water and drain piping installed during construction",
     detail:
@@ -49,6 +50,7 @@ export default function RepairsGallery() {
       {repairs.map((repair) => {
         const isOpen = openId === repair.id;
         const panelId = `repair-details-${repair.id}`;
+        const photos = photosForCategory(repair.id as WorkPhotoCategory);
 
         return (
           <article
@@ -99,6 +101,25 @@ export default function RepairsGallery() {
                     </li>
                   ))}
                 </ul>
+                {photos.length > 0 ? (
+                  <div className="mt-5">
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+                      Uploaded project photos • {photos.length} to review
+                    </p>
+                    <div className="grid grid-cols-3 gap-2">
+                      {photos.slice(0, 3).map((photo) => (
+                        <div key={photo.src} className="relative aspect-square overflow-hidden rounded-lg bg-slate-200">
+                          <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 767px) 30vw, 11vw" className="object-cover" />
+                        </div>
+                      ))}
+                    </div>
+                    <a href={`/gallery#${repair.id}`} className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-[#0879C7] hover:underline">
+                      View all {photos.length} photos →
+                    </a>
+                  </div>
+                ) : (
+                  <p className="mt-5 text-sm text-slate-600">Project photos will be added here after we select them.</p>
+                )}
                 <div className="mt-5 flex flex-wrap gap-3">
                   <Button href={site.phoneHref} className="min-h-11 gap-2 px-4">
                     <Phone size={16} aria-hidden="true" /> Call Us
