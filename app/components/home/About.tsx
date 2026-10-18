@@ -11,7 +11,7 @@ const highlights = [
   "Philadelphia Registered Master Plumber",
   "Licensed & Fully Insured",
   "Residential & Commercial Plumbing",
-  "Repairs, Service Work & Installations",
+  "Repairs, Service & Installations",
 ];
 
 export default function About() {
@@ -22,7 +22,7 @@ export default function About() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] shadow-xl sm:rounded-[32px]">
             <Image
               src="/plumbing-images/about1.webp"
-              alt="Philadelphia plumber discussing plumbing work with a homeowner"
+              alt="Philadelphia plumber discussing plumbing service with a homeowner"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -32,8 +32,8 @@ export default function About() {
           <div>
             <Heading
               eyebrow="About Philadelphia Plumbing Services"
-              title="A Local Plumbing Company Built Around the Work"
-              subtitle="Philadelphia Plumbing Services provides service, repair, installation, and larger plumbing work for homeowners, businesses, and property managers throughout the city. The goal is simple: diagnose the problem correctly, explain the options clearly, and do the work properly."
+              title="A Local Plumbing Company Built on Craftsmanship"
+              subtitle="Philadelphia Plumbing Services provides repairs, installations, drainage, water service, and commercial plumbing for homeowners, businesses, and property managers throughout the city. The goal is simple: diagnose the problem correctly, explain the options clearly, and deliver a lasting solution."
             />
 
             <div className="mt-8 space-y-4 sm:mt-10 sm:space-y-5">
@@ -52,9 +52,8 @@ export default function About() {
             </div>
 
             <p className="mt-8 max-w-xl leading-8 text-slate-600">
-              We work across Philadelphia on everything from everyday plumbing
-              problems to water service, drainage, fixture, and commercial
-              plumbing needs.
+              We serve Philadelphia properties with practical plumbing solutions
+              for everyday repairs, larger replacements, and ongoing service needs.
             </p>
 
             <div className="mt-10">
