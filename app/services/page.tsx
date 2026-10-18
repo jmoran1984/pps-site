@@ -30,6 +30,7 @@ import type { Metadata } from "next";
 import Footer from "../components/layout/Footer";
 
 export const metadata: Metadata = {
+  alternates: { canonical: `${site.url}/services` },
   title: "Plumbing Services",
   description:
     "Plumbing service in Philadelphia focused on fixture installation and repair, plumbing repairs and installations, water heaters, code corrections, water line work, and residential and commercial plumbing.",
